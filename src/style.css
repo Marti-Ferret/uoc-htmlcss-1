@@ -9,7 +9,7 @@ html {
 body {
   height: 100vh;
   color: #1f1f1f;
-  background: linear-gradient(to bottom, #bada55, #c0ffee);
+  background: linear-gradient(to bottom, #bada55, red);
 }
 
 h1 {
