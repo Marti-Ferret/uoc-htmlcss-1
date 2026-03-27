@@ -1,0 +1,504 @@
+// Variables
+$color-primary: #6d28d9;
+$color-primary-dark: #5b21b6;
+$color-nav-dark: #0f0f1e;
+$color-footer-bg: #3d3426;
+$color-text: #1a1a1a;
+$color-text-light: #555;
+$color-white: #ffffff;
+$font: 'Segoe UI', system-ui, sans-serif;
+$container-max: 960px;
+
+// Reset bàsic
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font;
+  color: $color-text;
+  background: $color-white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Contenidor global
+.contenidor {
+  margin: 0 auto;
+}
+
+// Botons
+.boto {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: $color-primary;
+  color: $color-white;
+  transition: background 0.2s;
+
+  &:hover {
+    background: $color-primary-dark;
+  }
+}
+
+
+// Skip Link
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: $color-primary;
+  color: $color-white;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  z-index: 200;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+// Navegacio 
+.barra-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $color-white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.barra-nav-contenidor {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.barra-nav-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: $color-text;
+  white-space: nowrap;
+}
+
+.barra-nav-nav {
+  flex: 1;
+}
+
+.barra-nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.barra-nav-link {
+  font-size: 0.9rem;
+  color: $color-text;
+  transition: color 0.2s;
+
+  &:hover,
+  &.actiu {
+    color: $color-primary;
+  }
+}
+
+.barra-nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: $color-nav-dark;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px;
+  cursor: pointer;
+  margin-left: auto;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: $color-white;
+    border-radius: 2px;
+  }
+}
+
+// portada
+.portada {
+  background: #f5f5f5;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.portada-imatge {
+  margin-bottom: 24px;
+
+  img {
+    width: 80%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+}
+
+.portada-contingut {
+  margin-left: 10%;
+}
+
+.portada-titol {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.portada-subtitol {
+  font-size: 1.2rem;
+  color: $color-text-light;
+  margin-bottom: 24px;
+}
+
+.identitat {
+  padding: 40px 0;
+  border-top: 1px solid #e5e7eb;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.identitat-titol {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.identitat-text {
+  font-size: 1rem;
+  color: $color-text-light;
+  line-height: 1.6;
+}
+
+// destacats
+.productes {
+  margin-top: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.productes-titol {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.productes-graella {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+// targetes
+.targeta {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:hover .targeta-foto {
+    transform: scale(1.04);
+  }
+}
+
+.boto-petit {
+  font-size: 0.7rem;
+  max-width: 120px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.targeta-imatge {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.targeta-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.targeta-cos {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.targeta-titol {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.targeta-desc {
+  font-size: 1rem;
+  color: $color-text-light;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+// hero
+.detall-hero {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+}
+
+.detall-hero-text {
+  position: absolute;
+  bottom: 32px;
+  left: 10%;
+  z-index: 1;
+  color: $color-white;
+}
+
+.detall-hero-titol {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.detall-hero-subtitol {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+// detall
+.detall-cos {
+  margin: 40px 10%;
+
+  p {
+    font-size: 1rem;
+    color: $color-text-light;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+}
+
+// galeria
+.galeria {
+  margin: 40px 10%;
+}
+
+.galeria-titol {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.galeria-graella {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.galeria-foto {
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: zoom-in;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+}
+
+// video
+.video-seccio {
+  margin: 40px 10%;
+}
+
+.video-titol {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.video-marc {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.video-font {
+  font-size: 0.8rem;
+  color: $color-text-light;
+  margin-top: 8px;
+}
+
+
+.pagina-titol {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.pagina-subtitol {
+  font-size: 1rem;
+  color: $color-text-light;
+  margin-bottom: 32px;
+}
+
+.pagina-cos {
+  margin: 40px 10%;
+}
+
+.targeta-link {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.targeta-link-titol {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.targeta-link-text {
+  font-size: 0.9rem;
+  color: $color-text-light;
+  line-height: 1.5;
+}
+
+// footer
+.peu {
+  margin-top: 50px;
+  background: $color-footer-bg;
+  color: #9ca3af;
+  padding: 24px 0;
+  font-size: 0.85rem;
+  padding-left: 10%;
+}
+
+.peu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+
+  a {
+    color: white;
+    transition: color 0.2s;
+  }
+
+  :hover{
+    font-weight: 700;
+  }
+
+  span {
+    color: white;
+  }
+}
+
+.peu-avis {
+  color: white;
+}
+
+// responsive
+@media (max-width: 768px) {
+
+  .barra-nav-menu {
+    display: flex;
+  }
+
+  .barra-nav-nav {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: $color-white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 24px;
+
+    &.obert {
+      display: block;
+    }
+  }
+
+  .barra-nav-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .portada-titol {
+    font-size: 1.5rem;
+  }
+
+  .productes-graella {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .productes-graella {
+    grid-template-columns: 1fr;
+  }
+}

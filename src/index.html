@@ -1,13 +1,79 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="utf-8"/>
-    <title>My First Parcel App</title>
-    <link rel="stylesheet" href="style.css" />
-      <include src="header.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Ruta Gastronòmica del Penedès</title>
+    <link rel="stylesheet" href="style.scss" />
     <script type="module" src="app.js"></script>
   </head>
   <body>
-    <h1>Hello, UOCss!</h1>
+
+    <include src="header.html"></include>
+
+    <main id="main-content">
+      <section class="portada">
+        <div class="portada-imatge">
+          <img src="img/Home.jpg" alt="Vinyes del Penedès" />
+        </div>
+        <div class="portada-contingut">
+          <h1 class="portada-titol">Descobreix la gastronomia del Penedès</h1>
+          <p class="portada-subtitol">Un viatge pels sabors locals: vins, cava, plats tradicionals i productes de proximitat.</p>
+          <a href="/categoria/" class="boto">Explorar la ruta</a>
+        </div>
+      </section>
+
+      <section class="identitat">
+        <div class="contenidor">
+          <h2 class="identitat-titol">Sabors d'identitat</h2>
+          <p class="identitat-text">El Penedès combina la cultura del vi i del cava amb plats tradicionals i productes locals que definixen el territori.</p>
+        </div>
+      </section>
+
+      <section class="productes" id="productes">
+        <div class="contenidor">
+          <h2 class="productes-titol">Productes destacats</h2>
+          <div class="productes-graella">
+
+            <article class="targeta">
+              <div class="targeta-imatge">
+                <img src="img/gall.jpg" alt="Gall del Penedès" class="targeta-foto" />
+              </div>
+              <div class="targeta-cos">
+                <h3 class="targeta-titol">Gall del Penedès</h3>
+                <p class="targeta-desc">Raça autòctona i recuperar tradicionals del territori.</p>
+                <a href="/det1/" class="boto boto-petit">Veure més</a>
+              </div>
+            </article>
+
+            <article class="targeta">
+              <div class="targeta-imatge">
+                <img src="img/vi.jpg" alt="Vins DO Penedès" class="targeta-foto" />
+              </div>
+              <div class="targeta-cos">
+                <h3 class="targeta-titol">Vins DO Penedès</h3>
+                <p class="targeta-desc">Diversitat de varietats i paisatge vitivínicola únic.</p>
+                <a href="/det2/" class="boto boto-petit">Veure més</a>
+              </div>
+            </article>
+
+            <article class="targeta">
+              <div class="targeta-imatge">
+                <img src="img/xato.jpg" alt="Xató" class="targeta-foto" />
+              </div>
+              <div class="targeta-cos">
+                <h3 class="targeta-titol">Xató</h3>
+                <p class="targeta-desc">Plat típic amb història, salsa singular i productes local.</p>
+                <a href="#" class="boto boto-petit">Veure més</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="footer.html"></include>
+
   </body>
 </html>
