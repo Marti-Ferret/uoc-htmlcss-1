@@ -27,7 +27,6 @@
     "sass": "^1.98.0"
   },
   "dependencies": {
-    "glightbox": "^3.3.1",
     "medium-zoom": "^1.1.0"
   }
 }
