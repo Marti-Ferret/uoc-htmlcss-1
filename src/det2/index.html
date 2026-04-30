@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ca">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vins DO Penedès · Gastronomia</title>
-    <link rel="stylesheet" href="../style.scss" />
+    <link rel="stylesheet" href="../style.scss">
     <script type="module" src="../app.js"></script>
   </head>
   <body>
@@ -14,7 +14,17 @@
     <main id="main-content">
 
       <div class="detall-hero">
-        <img src="../img/vi.jpg" alt="Vins DO Penedès" />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="../img/vi-mobile.jpg?as=webp"
+            type="image/webp">
+          <source
+            media="(min-width: 769px)"
+            srcset="../img/vi.jpg?as=webp&width=1400"
+            type="image/webp">
+          <img src="../img/vi.jpg" alt="Vins DO Penedès">
+        </picture>
         <div class="detall-hero-text">
           <h1 class="detall-hero-titol">Vins DO Penedès</h1>
           <p class="detall-hero-subtitol">Paisatge vitivínicola, varietats i cultura del vi</p>
@@ -30,9 +40,30 @@
       <section class="galeria">
         <h2 class="galeria-titol">Galeria</h2>
         <div class="galeria-graella">
-          <div class="galeria-foto"><img src="../img/vi2.jpg" alt="Vins DO Penedès" /></div>
-          <div class="galeria-foto"><img src="../img/vi3.jpg" alt="Vins DO Penedès" /></div>
-          <div class="galeria-foto"><img src="../img/vi4.jpg" alt="Vins DO Penedès" /></div>
+          <div class="galeria-foto">
+            <img
+              srcset="../img/vi2.jpg?as=webp&width=400 400w,
+                      ../img/vi2.jpg?as=webp&width=800 800w"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="../img/vi2.jpg"
+              alt="Vinyes del Penedès">
+          </div>
+          <div class="galeria-foto">
+            <img
+              srcset="../img/vi3.jpg?as=webp&width=400 400w,
+                      ../img/vi3.jpg?as=webp&width=800 800w"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="../img/vi3.jpg"
+              alt="Celler de vins del Penedès">
+          </div>
+          <div class="galeria-foto">
+            <img
+              srcset="../img/vi4.jpg?as=webp&width=400 400w,
+                      ../img/vi4.jpg?as=webp&width=800 800w"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="../img/vi4.jpg"
+              alt="Ampolles de vi DO Penedès">
+          </div>
         </div>
       </section>
 

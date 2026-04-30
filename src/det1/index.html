@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ca">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gall del Penedès · Gastronomia</title>
-    <link rel="stylesheet" href="../style.scss" />
+    <link rel="stylesheet" href="../style.scss">
     <script type="module" src="../app.js"></script>
   </head>
   <body>
@@ -14,7 +14,17 @@
     <main id="main-content">
 
       <div class="detall-hero">
-        <img src="../img/gall.jpg" alt="Gall del Penedès" />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="../img/gall-mobile.jpg?as=webp"
+            type="image/webp">
+          <source
+            media="(min-width: 769px)"
+            srcset="../img/gall.jpg?as=webp&width=1400"
+            type="image/webp">
+          <img src="../img/gall.jpg" alt="Gall del Penedès">
+        </picture>
         <div class="detall-hero-text">
           <h1 class="detall-hero-titol">Gall del Penedès</h1>
           <p class="detall-hero-subtitol">Tradició, territori i una raça única del Penedès</p>
@@ -30,9 +40,30 @@
       <section class="galeria">
         <h2 class="galeria-titol">Galeria</h2>
         <div class="galeria-graella">
-          <div class="galeria-foto"><img src="../img/gall2.jpg" alt="Gall del Penedès" /></div>
-          <div class="galeria-foto"><img src="../img/gall3.jpg" alt="Gall del Penedès" /></div>
-          <div class="galeria-foto"><img src="../img/gall4.jpg" alt="Gall del Penedès" /></div>
+          <div class="galeria-foto">
+            <img
+              srcset="../img/gall2.jpg?as=webp&width=400 400w,
+                      ../img/gall2.jpg?as=webp&width=800 800w"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="../img/gall2.jpg"
+              alt="Gall del Penedès en llibertat">
+          </div>
+          <div class="galeria-foto">
+            <img
+              srcset="../img/gall3.jpg?as=webp&width=400 400w,
+                      ../img/gall3.jpg?as=webp&width=800 800w"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="../img/gall3.jpg"
+              alt="Gall del Penedès de prop">
+          </div>
+          <div class="galeria-foto">
+            <img
+              srcset="../img/gall4.jpg?as=webp&width=400 400w,
+                      ../img/gall4.jpg?as=webp&width=800 800w"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src="../img/gall4.jpg"
+              alt="Gall del Penedès al camp">
+          </div>
         </div>
       </section>
 

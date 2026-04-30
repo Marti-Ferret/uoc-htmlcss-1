@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ca">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ruta Gastronòmica del Penedès</title>
-    <link rel="stylesheet" href="style.scss" />
+    <link rel="stylesheet" href="style.scss">
     <script type="module" src="app.js"></script>
   </head>
   <body>
@@ -14,9 +14,24 @@
     <main id="main-content">
       <section class="portada">
         <div class="portada-imatge">
-          <img src="img/Home.jpg" alt="Vinyes del Penedès" />
+          <picture>
+            <source
+              srcset="img/Home.jpg?as=webp&width=960 1x,
+                      img/Home.jpg?as=webp&width=1920 2x"
+              type="image/webp">
+            <img
+              src="img/Home.jpg"
+              srcset="img/Home.jpg?width=960 1x, img/Home.jpg?width=1920 2x"
+              alt="Vinyes del Penedès">
+          </picture>
         </div>
         <div class="portada-contingut">
+          <svg class="svg-decoratiu" viewBox="0 0 60 70" aria-hidden="true" focusable="false">
+            <path d="M30 8 C42 8 52 18 50 30 C48 42 38 52 30 56 C22 52 12 42 10 30 C8 18 18 8 30 8Z" fill="#6d28d9" opacity="0.2"/>
+            <path d="M30 12 C30 12 45 22 42 35 C39 46 30 50 30 50 C30 50 21 46 18 35 C15 22 30 12 30 12Z" fill="#6d28d9"/>
+            <line x1="30" y1="50" x2="30" y2="65" stroke="#6d28d9" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 60 Q27 56 30 60 Q33 56 36 60" fill="none" stroke="#6d28d9" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
           <h1 class="portada-titol">Descobreix la gastronomia del Penedès</h1>
           <p class="portada-subtitol">Un viatge pels sabors locals: vins, cava, plats tradicionals i productes de proximitat.</p>
           <a href="/categoria/" class="boto">Explorar la ruta</a>
@@ -37,7 +52,13 @@
 
             <article class="targeta">
               <div class="targeta-imatge">
-                <img src="img/gall.jpg" alt="Gall del Penedès" class="targeta-foto" />
+                <img
+                  srcset="img/gall.jpg?as=webp&width=400 400w,
+                          img/gall.jpg?as=webp&width=800 800w"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="img/gall.jpg"
+                  alt="Gall del Penedès"
+                  class="targeta-foto">
               </div>
               <div class="targeta-cos">
                 <h3 class="targeta-titol">Gall del Penedès</h3>
@@ -48,7 +69,13 @@
 
             <article class="targeta">
               <div class="targeta-imatge">
-                <img src="img/vi.jpg" alt="Vins DO Penedès" class="targeta-foto" />
+                <img
+                  srcset="img/vi.jpg?as=webp&width=400 400w,
+                          img/vi.jpg?as=webp&width=800 800w"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="img/vi.jpg"
+                  alt="Vins DO Penedès"
+                  class="targeta-foto">
               </div>
               <div class="targeta-cos">
                 <h3 class="targeta-titol">Vins DO Penedès</h3>
@@ -59,7 +86,13 @@
 
             <article class="targeta">
               <div class="targeta-imatge">
-                <img src="img/xato.jpg" alt="Xató" class="targeta-foto" />
+                <img
+                  srcset="img/xato.jpg?as=webp&width=400 400w,
+                          img/xato.jpg?as=webp&width=800 800w"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  src="img/xato.jpg"
+                  alt="Xató"
+                  class="targeta-foto">
               </div>
               <div class="targeta-cos">
                 <h3 class="targeta-titol">Xató</h3>
