@@ -15,15 +15,12 @@
 
       <div class="detall-hero">
         <picture>
-          <source
-            media="(max-width: 768px)"
-            srcset="../img/vi-mobile.jpg?as=webp"
-            type="image/webp">
-          <source
-            media="(min-width: 769px)"
-            srcset="../img/vi.jpg?as=webp&width=1400"
-            type="image/webp">
-          <img src="../img/vi.jpg" alt="Vins DO Penedès">
+          <source media="(max-width: 768px)" srcset="../img/vi-mobile.jpg?as=avif" type="image/avif">
+          <source media="(min-width: 769px)" srcset="../img/vi.jpg?as=avif&width=1400" type="image/avif">
+          <source media="(max-width: 768px)" srcset="../img/vi-mobile.jpg?as=webp" type="image/webp">
+          <source media="(min-width: 769px)" srcset="../img/vi.jpg?as=webp&width=1400" type="image/webp">
+          <img src="../img/vi.jpg" alt="Vins DO Penedès"
+               width="1400" height="788" fetchpriority="high">
         </picture>
         <div class="detall-hero-text">
           <h1 class="detall-hero-titol">Vins DO Penedès</h1>
@@ -41,31 +38,55 @@
         <h2 class="galeria-titol">Galeria</h2>
         <div class="galeria-graella">
           <div class="galeria-foto">
-            <img
-              srcset="../img/vi2.jpg?as=webp&width=400 400w,
-                      ../img/vi2.jpg?as=webp&width=800 800w"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              src="../img/vi2.jpg"
-              alt="Vinyes del Penedès"
-              loading="lazy">
+            <picture>
+              <source
+                srcset="../img/vi2.jpg?as=avif&width=400 400w,
+                        ../img/vi2.jpg?as=avif&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                type="image/avif">
+              <img
+                srcset="../img/vi2.jpg?as=webp&width=400 400w,
+                        ../img/vi2.jpg?as=webp&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src="../img/vi2.jpg"
+                alt="Vinyes del Penedès"
+                width="400" height="267"
+                loading="lazy">
+            </picture>
           </div>
           <div class="galeria-foto">
-            <img
-              srcset="../img/vi3.jpg?as=webp&width=400 400w,
-                      ../img/vi3.jpg?as=webp&width=800 800w"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              src="../img/vi3.jpg"
-              alt="Celler de vins del Penedès"
-              loading="lazy">
+            <picture>
+              <source
+                srcset="../img/vi3.jpg?as=avif&width=400 400w,
+                        ../img/vi3.jpg?as=avif&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                type="image/avif">
+              <img
+                srcset="../img/vi3.jpg?as=webp&width=400 400w,
+                        ../img/vi3.jpg?as=webp&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src="../img/vi3.jpg"
+                alt="Celler de vins del Penedès"
+                width="400" height="600"
+                loading="lazy">
+            </picture>
           </div>
           <div class="galeria-foto">
-            <img
-              srcset="../img/vi4.jpg?as=webp&width=400 400w,
-                      ../img/vi4.jpg?as=webp&width=800 800w"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              src="../img/vi4.jpg"
-              alt="Ampolles de vi DO Penedès"
-              loading="lazy">
+            <picture>
+              <source
+                srcset="../img/vi4.jpg?as=avif&width=400 400w,
+                        ../img/vi4.jpg?as=avif&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                type="image/avif">
+              <img
+                srcset="../img/vi4.jpg?as=webp&width=400 400w,
+                        ../img/vi4.jpg?as=webp&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src="../img/vi4.jpg"
+                alt="Ampolles de vi DO Penedès"
+                width="400" height="600"
+                loading="lazy">
+            </picture>
           </div>
         </div>
       </section>
@@ -73,7 +94,15 @@
       <section class="video-seccio">
         <h2 class="video-titol">Descobreix el Penedès en vídeo</h2>
         <div class="video-marc">
-          <iframe width="1278" height="719" src="https://www.youtube.com/embed/BvCZ0OxPYzE" loading="lazy" title="Vilafranca, terra de #cultura | Turisme Vilafranca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="youtube-facade" data-videoid="BvCZ0OxPYzE">
+            <img
+              src="https://i.ytimg.com/vi/BvCZ0OxPYzE/hqdefault.jpg"
+              alt="Vilafranca, terra de cultura - reproduir vídeo"
+              loading="lazy"
+              width="480"
+              height="360">
+            <button class="youtube-facade-btn" aria-label="Reproduir vídeo">▶</button>
+          </div>
         </div>
         <p class="video-font">Font: Vídeo del Penedès</p>
       </section>

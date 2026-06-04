@@ -18,6 +18,21 @@ if (toggle && nav) {
   });
 }
 
+// Carrega l'iframe de YouTube només quan l'usuari clica la miniatura
+document.querySelectorAll('.youtube-facade').forEach(facade => {
+  facade.addEventListener('click', () => {
+    const videoId = facade.dataset.videoid;
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.width = '1278';
+    iframe.height = '719';
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('title', facade.querySelector('img').alt);
+    facade.replaceWith(iframe);
+  });
+});
+
 // Ressalta l'enllaç del menú que correspon a la pàgina actual
 const path = window.location.pathname;
 document.querySelectorAll('.barra-nav-link').forEach(link => {

@@ -15,15 +15,12 @@
 
       <div class="detall-hero">
         <picture>
-          <source
-            media="(max-width: 768px)"
-            srcset="../img/gall-mobile.jpg?as=webp"
-            type="image/webp">
-          <source
-            media="(min-width: 769px)"
-            srcset="../img/gall.jpg?as=webp&width=1400"
-            type="image/webp">
-          <img src="../img/gall.jpg" alt="Gall del Penedès">
+          <source media="(max-width: 768px)" srcset="../img/gall-mobile.jpg?as=avif" type="image/avif">
+          <source media="(min-width: 769px)" srcset="../img/gall.jpg?as=avif&width=1400" type="image/avif">
+          <source media="(max-width: 768px)" srcset="../img/gall-mobile.jpg?as=webp" type="image/webp">
+          <source media="(min-width: 769px)" srcset="../img/gall.jpg?as=webp&width=1400" type="image/webp">
+          <img src="../img/gall.jpg" alt="Gall del Penedès"
+               width="1400" height="933" fetchpriority="high">
         </picture>
         <div class="detall-hero-text">
           <h1 class="detall-hero-titol">Gall del Penedès</h1>
@@ -41,31 +38,55 @@
         <h2 class="galeria-titol">Galeria</h2>
         <div class="galeria-graella">
           <div class="galeria-foto">
-            <img
-              srcset="../img/gall2.jpg?as=webp&width=400 400w,
-                      ../img/gall2.jpg?as=webp&width=800 800w"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              src="../img/gall2.jpg"
-              alt="Gall del Penedès en llibertat"
-              loading="lazy">
+            <picture>
+              <source
+                srcset="../img/gall2.jpg?as=avif&width=400 400w,
+                        ../img/gall2.jpg?as=avif&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                type="image/avif">
+              <img
+                srcset="../img/gall2.jpg?as=webp&width=400 400w,
+                        ../img/gall2.jpg?as=webp&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src="../img/gall2.jpg"
+                alt="Gall del Penedès en llibertat"
+                width="400" height="267"
+                loading="lazy">
+            </picture>
           </div>
           <div class="galeria-foto">
-            <img
-              srcset="../img/gall3.jpg?as=webp&width=400 400w,
-                      ../img/gall3.jpg?as=webp&width=800 800w"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              src="../img/gall3.jpg"
-              alt="Gall del Penedès de prop"
-              loading="lazy">
+            <picture>
+              <source
+                srcset="../img/gall3.jpg?as=avif&width=400 400w,
+                        ../img/gall3.jpg?as=avif&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                type="image/avif">
+              <img
+                srcset="../img/gall3.jpg?as=webp&width=400 400w,
+                        ../img/gall3.jpg?as=webp&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src="../img/gall3.jpg"
+                alt="Gall del Penedès de prop"
+                width="400" height="267"
+                loading="lazy">
+            </picture>
           </div>
           <div class="galeria-foto">
-            <img
-              srcset="../img/gall4.jpg?as=webp&width=400 400w,
-                      ../img/gall4.jpg?as=webp&width=800 800w"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              src="../img/gall4.jpg"
-              alt="Gall del Penedès al camp"
-              loading="lazy">
+            <picture>
+              <source
+                srcset="../img/gall4.jpg?as=avif&width=400 400w,
+                        ../img/gall4.jpg?as=avif&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                type="image/avif">
+              <img
+                srcset="../img/gall4.jpg?as=webp&width=400 400w,
+                        ../img/gall4.jpg?as=webp&width=800 800w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                src="../img/gall4.jpg"
+                alt="Gall del Penedès al camp"
+                width="400" height="267"
+                loading="lazy">
+            </picture>
           </div>
         </div>
       </section>
@@ -73,7 +94,15 @@
       <section class="video-seccio">
         <h2 class="video-titol">Vídeo</h2>
         <div class="video-marc">
-          <iframe width="1278" height="719" src="https://www.youtube.com/embed/KqLBE5t6MrE" loading="lazy" title="Gall del Penedès amb IGP al Cabernet, orellanes i festucs amb patates al romaní" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="youtube-facade" data-videoid="KqLBE5t6MrE">
+            <img
+              src="https://i.ytimg.com/vi/KqLBE5t6MrE/hqdefault.jpg"
+              alt="Gall del Penedès amb IGP al Cabernet - reproduir vídeo"
+              loading="lazy"
+              width="480"
+              height="360">
+            <button class="youtube-facade-btn" aria-label="Reproduir vídeo">▶</button>
+          </div>
         </div>
         <p class="video-font">Font: Vídeo il·lustratiu</p>
       </section>

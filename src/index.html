@@ -16,13 +16,20 @@
         <div class="portada-imatge">
           <picture>
             <source
+              srcset="img/Home.jpg?as=avif&width=960 1x,
+                      img/Home.jpg?as=avif&width=1920 2x"
+              type="image/avif">
+            <source
               srcset="img/Home.jpg?as=webp&width=960 1x,
                       img/Home.jpg?as=webp&width=1920 2x"
               type="image/webp">
             <img
               src="img/Home.jpg"
               srcset="img/Home.jpg?width=960 1x, img/Home.jpg?width=1920 2x"
-              alt="Vinyes del Penedès">
+              alt="Vinyes del Penedès"
+              width="1920"
+              height="1280"
+              fetchpriority="high">
           </picture>
         </div>
         <div class="portada-contingut">
@@ -52,14 +59,23 @@
 
             <article class="targeta">
               <div class="targeta-imatge">
-                <img
-                  srcset="img/gall.jpg?as=webp&width=400 400w,
-                          img/gall.jpg?as=webp&width=800 800w"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  src="img/gall.jpg"
-                  alt="Gall del Penedès"
-                  loading="lazy"
-                  class="targeta-foto">
+                <picture>
+                  <source
+                    srcset="img/gall.jpg?as=avif&width=400 400w,
+                            img/gall.jpg?as=avif&width=800 800w"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    type="image/avif">
+                  <img
+                    srcset="img/gall.jpg?as=webp&width=400 400w,
+                            img/gall.jpg?as=webp&width=800 800w"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    src="img/gall.jpg"
+                    alt="Gall del Penedès"
+                    width="400"
+                    height="267"
+                    loading="lazy"
+                    class="targeta-foto">
+                </picture>
               </div>
               <div class="targeta-cos">
                 <h3 class="targeta-titol">Gall del Penedès</h3>
@@ -70,14 +86,23 @@
 
             <article class="targeta">
               <div class="targeta-imatge">
-                <img
-                  srcset="img/vi.jpg?as=webp&width=400 400w,
-                          img/vi.jpg?as=webp&width=800 800w"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  src="img/vi.jpg"
-                  alt="Vins DO Penedès"
-                  loading="lazy"
-                  class="targeta-foto">
+                <picture>
+                  <source
+                    srcset="img/vi.jpg?as=avif&width=400 400w,
+                            img/vi.jpg?as=avif&width=800 800w"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    type="image/avif">
+                  <img
+                    srcset="img/vi.jpg?as=webp&width=400 400w,
+                            img/vi.jpg?as=webp&width=800 800w"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    src="img/vi.jpg"
+                    alt="Vins DO Penedès"
+                    width="400"
+                    height="225"
+                    loading="lazy"
+                    class="targeta-foto">
+                </picture>
               </div>
               <div class="targeta-cos">
                 <h3 class="targeta-titol">Vins DO Penedès</h3>
@@ -88,14 +113,23 @@
 
             <article class="targeta">
               <div class="targeta-imatge">
-                <img
-                  srcset="img/xato.jpg?as=webp&width=400 400w,
-                          img/xato.jpg?as=webp&width=800 800w"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  src="img/xato.jpg"
-                  alt="Xató"
-                  loading="lazy"
-                  class="targeta-foto">
+                <picture>
+                  <source
+                    srcset="img/xato.jpg?as=avif&width=400 400w,
+                            img/xato.jpg?as=avif&width=800 800w"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    type="image/avif">
+                  <img
+                    srcset="img/xato.jpg?as=webp&width=400 400w,
+                            img/xato.jpg?as=webp&width=800 800w"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    src="img/xato.jpg"
+                    alt="Xató"
+                    width="400"
+                    height="267"
+                    loading="lazy"
+                    class="targeta-foto">
+                </picture>
               </div>
               <div class="targeta-cos">
                 <h3 class="targeta-titol">Xató</h3>
